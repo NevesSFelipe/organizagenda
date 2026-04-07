@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.error-code {
+    font-size: 96px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.error-description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4757;
+}
+
+/* 🔹 DEFAULT (404) */
+.error-code::after {
+    content: "404";
+}
+
+.error-message::after {
+    content: "Página não encontrada";
+}
+
+.error-description::after {
+    content: "A página que você está procurando não existe ou foi removida.";
+}
+
+/* 🔹 CASO SEJA 500 */
+html[data-error="500"] .error-code::after {
+    content: "500";
+}
+
+html[data-error="500"] .error-message::after {
+    content: "Erro interno do servidor";
+}
+
+html[data-error="500"] .error-description::after {
+    content: "Ocorreu um erro inesperado. Tente novamente mais tarde.";
+}
