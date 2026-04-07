@@ -15,19 +15,7 @@ class HomeController {
             "bodyClass" => "home-page"
         ];
 
-        View::render('home', $data);
-    }
-
-    public function loginFuncionario()
-    {
-
-        $data = [
-            'title' => 'Login Funcionário',
-            'css' => 'login.css',
-            'bodyClass' => 'login-page'
-        ];
-
-        View::render('loginFuncionario', $data);
+        View::render('home/index', $data);
     }
 
 }

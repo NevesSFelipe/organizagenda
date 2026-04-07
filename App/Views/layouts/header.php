@@ -35,7 +35,7 @@
                 <a href="#" class="btn-agendar"> Agendar Procedimento </a>
 
                 <div class="icon-login">
-                    <a href="<?= $base ?>home/loginFuncionario">👤</a>
+                    <a href="<?= $base ?>funcionarios/login">👤</a>
                 </div>
             </div>
         </header>
