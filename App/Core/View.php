@@ -16,7 +16,9 @@ class View {
             self::renderError(404);
         }
 
+        require __DIR__ . '/../views/layouts/header.php';
         require $caminho;
+        require __DIR__ . '/../views/layouts/footer.php';
     
     }
 
